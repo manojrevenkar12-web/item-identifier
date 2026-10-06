@@ -1,0 +1,14 @@
+# CNN baseline for comparison against the DINOv2 ViT.
+data:
+  root: data/stanford_cars
+  batch_size: 64
+  category_map: data/stanford_cars/category_map.json
+model:
+  backbone: resnet50.a1_in1k
+  pretrained: true
+  freeze_epochs: 1
+train:
+  epochs: 15
+  lr_head: 1.0e-3
+  lr_backbone: 1.0e-4
+  out_dir: runs/cars_resnet50

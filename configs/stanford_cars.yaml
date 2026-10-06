@@ -1,0 +1,27 @@
+# Production-style run on Stanford Cars (196 fine-grained car models, ~16k images).
+# Train on a GPU (Colab T4 is enough): `itemid train --config configs/stanford_cars.yaml`
+data:
+  root: data/stanford_cars
+  image_size: 224
+  batch_size: 48
+  num_workers: 4
+  category_map: data/stanford_cars/category_map.json   # model -> make, written by prepare script
+model:
+  backbone: vit_small_patch14_dinov2.lvd142m
+  pretrained: true
+  freeze_epochs: 1
+train:
+  epochs: 15
+  lr_head: 1.0e-3
+  lr_backbone: 2.0e-5
+  amp: true
+  out_dir: runs/cars_dinov2_s
+decision:
+  target_precision: 0.95
+  min_threshold: 0.30
+  min_samples_per_category: 30
+gates:
+  min_top1_accuracy: 0.80
+  max_ece: 0.05
+  min_coverage_at_target: 0.60
+  max_p95_latency_ms: 150

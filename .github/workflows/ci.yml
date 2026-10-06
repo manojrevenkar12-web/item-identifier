@@ -1,0 +1,66 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+      - name: Install
+        run: |
+          pip install --index-url https://download.pytorch.org/whl/cpu torch torchvision
+          pip install -e ".[serve,export,dev]"
+      - name: Lint
+        run: ruff check src tests scripts
+      - name: Unit + integration tests
+        run: pytest
+
+  pipeline-gates:
+    # Exercises the full train -> calibrate -> evaluate -> export -> benchmark -> gate path on CPU.
+    # A model that breaches any gate fails the build.
+    needs: test
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+      - name: Install
+        run: |
+          pip install --index-url https://download.pytorch.org/whl/cpu torch torchvision
+          pip install -e ".[export]"
+      - name: Train, evaluate, export, benchmark
+        run: |
+          itemid synth --out data/synthetic
+          itemid train --config configs/smoke.yaml
+          itemid evaluate --config configs/smoke.yaml --checkpoint runs/smoke/model.pt
+          itemid export --checkpoint runs/smoke/model.pt --out runs/smoke/model.onnx
+          itemid bench --checkpoint runs/smoke/model.pt --onnx runs/smoke/model.onnx --out runs/smoke/latency.json
+      - name: Release gates
+        run: itemid gate --config configs/smoke.yaml --report runs/smoke/report_test.json --latency runs/smoke/latency.json
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: smoke-report
+          path: |
+            runs/smoke/report_test.html
+            runs/smoke/report_test.json
+            runs/smoke/calibration.json
+
+  docker:
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: docker build -t itemid:ci .

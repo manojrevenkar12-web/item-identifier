@@ -1,0 +1,14 @@
+# Active-learning experiment on Stanford Cars: start from 20% of the labelled train split and compare
+# query strategies.  itemid al-simulate --config configs/cars_active_learning.yaml \
+#   --strategies random,margin,margin_diverse --rounds 3 --budget 700 --out runs/al_cars
+data:
+  root: data/stanford_cars
+  batch_size: 48
+  category_map: data/stanford_cars/category_map.json
+  labelled_fraction: 0.2
+model:
+  backbone: vit_small_patch14_dinov2.lvd142m
+  freeze_epochs: 1
+train:
+  epochs: 8
+  early_stop_patience: 3

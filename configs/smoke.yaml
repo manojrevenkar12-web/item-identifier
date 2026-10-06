@@ -1,0 +1,28 @@
+# Tiny CPU run on a generated dataset. Used by tests and CI to exercise the whole pipeline in ~1 minute.
+data:
+  root: data/synthetic
+  image_size: 64
+  batch_size: 32
+  num_workers: 0
+  category_map: data/synthetic/category_map.json
+model:
+  backbone: resnet18
+  pretrained: false
+  drop_rate: 0.0
+  freeze_epochs: 0
+train:
+  epochs: 6
+  lr_head: 3.0e-3
+  lr_backbone: 3.0e-3
+  warmup_epochs: 0
+  label_smoothing: 0.0
+  amp: false
+  out_dir: runs/smoke
+decision:
+  target_precision: 0.9
+  min_samples_per_category: 10
+gates:
+  min_top1_accuracy: 0.5
+  max_ece: 0.15
+  min_coverage_at_target: 0.2
+  max_p95_latency_ms: 500
