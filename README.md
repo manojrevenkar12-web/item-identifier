@@ -1,5 +1,8 @@
 # Item Identifier — fine-grained visual identification that knows when it is unsure
 
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/manojrevenkar12-web/item-identifier/blob/main/notebooks/train_stanford_cars_colab.ipynb)
+
+
 A production-oriented computer-vision system that identifies an exact item (here: one of 196 car
 make/model/year classes in Stanford Cars) from a photo, returns a **calibrated** confidence, and
 **abstains** when that confidence is below a per-category threshold tuned to a business precision
