@@ -84,4 +84,9 @@ point for "add new categories or fix existing ones?".
 - **Single image.** Listings usually have several photos; aggregating them should raise coverage.
 - **Calibration drift.** Temperature and thresholds should be re-fitted on recent reviewed traffic,
   not only on the original validation split.
-- **Latency.** Further options: INT8 quantisation, distillation into a smaller student, batching.
+- **Latency.** p95 is 293 ms on Colab's 2-thread CPU, over the 150 ms gate. Next: INT8 dynamic quantisation
+  of the ONNX model, distillation into a smaller student, request batching, or GPU serving.
+- **Pixelate robustness split.** Scores 2.6% with predictions collapsing onto class 0, which suggests a
+  data-preparation issue with that split. Excluded from reported results until investigated.
+- **Active learning is single-seed.** Margin sampling wins by 3–4 points per round; more seeds are needed
+  before treating the gap as reliable.

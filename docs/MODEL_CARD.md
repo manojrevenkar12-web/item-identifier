@@ -16,7 +16,8 @@ Check the dataset's licence terms before any commercial use.
 
 **Metrics.** Top-1/5, macro top-1, ECE (15 equal-width bins), NLL, Brier, coverage and precision at
 the accepted threshold, AURC, per-category breakdown, and the same on corrupted test copies.
-Results: see README (filled from a real run).
+Results (test, 8,041 images): top-1 90.6%, top-5 98.0%, ECE 0.021 after calibration (0.230 before),
+80.6% auto-accept coverage at 95.9% precision. Full tables in the README and `results/`.
 
 **Limitations.** Closed-set classifier; studio and dealer photos dominate the data, so real user photos
 will be harder; thresholds assume the test-time class mix resembles validation; calibration can drift

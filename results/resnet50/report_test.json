@@ -1,0 +1,795 @@
+{
+  "n": 8041,
+  "num_classes": 196,
+  "top1": 0.6769058574804129,
+  "top5": 0.8937942981719971,
+  "macro_top1": 0.6782987798060282,
+  "calibration": {
+    "temperature": 0.6480132341384888,
+    "ece": 0.009878485636944753,
+    "ece_uncalibrated": 0.20631829078347805,
+    "nll": 1.2171025276184082,
+    "brier": 0.43339693546295166,
+    "reliability": [
+      {
+        "lo": 0.0,
+        "hi": 0.06666666666666667,
+        "count": 0,
+        "accuracy": null,
+        "confidence": null
+      },
+      {
+        "lo": 0.06666666666666667,
+        "hi": 0.13333333333333333,
+        "count": 59,
+        "accuracy": 0.11864406779661017,
+        "confidence": 0.1129988506436348
+      },
+      {
+        "lo": 0.13333333333333333,
+        "hi": 0.2,
+        "count": 228,
+        "accuracy": 0.14473684210526316,
+        "confidence": 0.1709156334400177
+      },
+      {
+        "lo": 0.2,
+        "hi": 0.26666666666666666,
+        "count": 400,
+        "accuracy": 0.2325,
+        "confidence": 0.23571056127548218
+      },
+      {
+        "lo": 0.26666666666666666,
+        "hi": 0.3333333333333333,
+        "count": 468,
+        "accuracy": 0.2863247863247863,
+        "confidence": 0.30025017261505127
+      },
+      {
+        "lo": 0.3333333333333333,
+        "hi": 0.4,
+        "count": 477,
+        "accuracy": 0.3584905660377358,
+        "confidence": 0.3674803376197815
+      },
+      {
+        "lo": 0.4,
+        "hi": 0.4666666666666667,
+        "count": 506,
+        "accuracy": 0.4209486166007905,
+        "confidence": 0.4334932565689087
+      },
+      {
+        "lo": 0.4666666666666667,
+        "hi": 0.5333333333333333,
+        "count": 522,
+        "accuracy": 0.5057471264367817,
+        "confidence": 0.4994965195655823
+      },
+      {
+        "lo": 0.5333333333333333,
+        "hi": 0.6,
+        "count": 480,
+        "accuracy": 0.5729166666666666,
+        "confidence": 0.565801739692688
+      },
+      {
+        "lo": 0.6,
+        "hi": 0.6666666666666666,
+        "count": 504,
+        "accuracy": 0.6448412698412699,
+        "confidence": 0.6322088837623596
+      },
+      {
+        "lo": 0.6666666666666666,
+        "hi": 0.7333333333333333,
+        "count": 494,
+        "accuracy": 0.6821862348178138,
+        "confidence": 0.7008318305015564
+      },
+      {
+        "lo": 0.7333333333333333,
+        "hi": 0.8,
+        "count": 506,
+        "accuracy": 0.7905138339920948,
+        "confidence": 0.7671764492988586
+      },
+      {
+        "lo": 0.8,
+        "hi": 0.8666666666666667,
+        "count": 623,
+        "accuracy": 0.8523274478330658,
+        "confidence": 0.8347700238227844
+      },
+      {
+        "lo": 0.8666666666666667,
+        "hi": 0.9333333333333333,
+        "count": 768,
+        "accuracy": 0.9140625,
+        "confidence": 0.9021708369255066
+      },
+      {
+        "lo": 0.9333333333333333,
+        "hi": 1.0,
+        "count": 2006,
+        "accuracy": 0.9760717846460618,
+        "confidence": 0.9757933020591736
+      }
+    ]
+  },
+  "selective": {
+    "coverage": 0.37930605646063925,
+    "selective_precision": 0.9452459016393443,
+    "accepted": 3050,
+    "abstained": 4991,
+    "accepted_errors": 167,
+    "target_precision_note": "thresholds fitted on val, measured here"
+  },
+  "risk_coverage": {
+    "coverage": [
+      0.0001,
+      0.0205,
+      0.0409,
+      0.0613,
+      0.0817,
+      0.1021,
+      0.1225,
+      0.1429,
+      0.1633,
+      0.1837,
+      0.2041,
+      0.2245,
+      0.2449,
+      0.2654,
+      0.2858,
+      0.3062,
+      0.3266,
+      0.347,
+      0.3674,
+      0.3878,
+      0.4082,
+      0.4286,
+      0.4489,
+      0.4693,
+      0.4897,
+      0.5103,
+      0.5307,
+      0.5511,
+      0.5714,
+      0.5918,
+      0.6122,
+      0.6326,
+      0.653,
+      0.6734,
+      0.6938,
+      0.7142,
+      0.7346,
+      0.7551,
+      0.7755,
+      0.7959,
+      0.8163,
+      0.8367,
+      0.8571,
+      0.8775,
+      0.8979,
+      0.9183,
+      0.9387,
+      0.9591,
+      0.9795,
+      1.0
+    ],
+    "risk": [
+      0.0,
+      0.0,
+      0.0061,
+      0.0041,
+      0.003,
+      0.0049,
+      0.0061,
+      0.0096,
+      0.016,
+      0.0183,
+      0.0195,
+      0.0227,
+      0.0239,
+      0.0272,
+      0.0309,
+      0.0341,
+      0.0373,
+      0.0416,
+      0.0477,
+      0.0523,
+      0.0567,
+      0.0644,
+      0.0706,
+      0.0755,
+      0.0818,
+      0.0919,
+      0.0998,
+      0.1079,
+      0.1129,
+      0.1236,
+      0.1335,
+      0.1419,
+      0.1504,
+      0.1607,
+      0.1699,
+      0.1785,
+      0.1886,
+      0.198,
+      0.2075,
+      0.2188,
+      0.2285,
+      0.2387,
+      0.2487,
+      0.2588,
+      0.269,
+      0.2795,
+      0.2907,
+      0.3002,
+      0.312,
+      0.3231
+    ],
+    "aurc": 0.1148617678436094
+  },
+  "errors": {
+    "total": 2598,
+    "within_category": 819,
+    "cross_category": 1779,
+    "top_confusions": [
+      {
+        "true": "Bentley Continental GT Coupe 2007",
+        "pred": "Bentley Continental Flying Spur Sedan 2007",
+        "count": 20
+      },
+      {
+        "true": "Ferrari 458 Italia Coupe 2012",
+        "pred": "Ferrari 458 Italia Convertible 2012",
+        "count": 17
+      },
+      {
+        "true": "Audi S5 Coupe 2012",
+        "pred": "Audi A5 Coupe 2012",
+        "count": 14
+      },
+      {
+        "true": "Audi TTS Coupe 2012",
+        "pred": "Audi TT Hatchback 2011",
+        "count": 14
+      },
+      {
+        "true": "Chevrolet Silverado 1500 Hybrid Crew Cab 2012",
+        "pred": "Chevrolet Silverado 1500 Extended Cab 2012",
+        "count": 13
+      },
+      {
+        "true": "Chevrolet Express Van 2007",
+        "pred": "GMC Savana Van 2012",
+        "count": 11
+      },
+      {
+        "true": "Audi 100 Wagon 1994",
+        "pred": "Audi 100 Sedan 1994",
+        "count": 10
+      },
+      {
+        "true": "Audi S4 Sedan 2007",
+        "pred": "Audi S6 Sedan 2011",
+        "count": 10
+      },
+      {
+        "true": "BMW 6 Series Convertible 2007",
+        "pred": "BMW M6 Convertible 2010",
+        "count": 10
+      },
+      {
+        "true": "Dodge Caliber Wagon 2012",
+        "pred": "Dodge Caliber Wagon 2007",
+        "count": 10
+      },
+      {
+        "true": "Audi A5 Coupe 2012",
+        "pred": "Audi S5 Coupe 2012",
+        "count": 9
+      },
+      {
+        "true": "Dodge Sprinter Cargo Van 2009",
+        "pred": "Mercedes-Benz Sprinter Van 2012",
+        "count": 9
+      },
+      {
+        "true": "Acura TL Sedan 2012",
+        "pred": "Acura TSX Sedan 2012",
+        "count": 8
+      },
+      {
+        "true": "Audi 100 Sedan 1994",
+        "pred": "Audi 100 Wagon 1994",
+        "count": 8
+      },
+      {
+        "true": "Audi V8 Sedan 1994",
+        "pred": "Audi 100 Sedan 1994",
+        "count": 8
+      }
+    ]
+  },
+  "per_category": {
+    "AM General": {
+      "n": 44,
+      "n_classes": 1,
+      "top1": 0.8636363636363636,
+      "coverage": 0.5681818181818182,
+      "selective_precision": 1.0,
+      "threshold": 0.8254386782646179
+    },
+    "Acura": {
+      "n": 240,
+      "n_classes": 6,
+      "top1": 0.6125,
+      "coverage": 0.2916666666666667,
+      "selective_precision": 0.8857142857142857,
+      "threshold": 0.8714865446090698
+    },
+    "Aston Martin": {
+      "n": 157,
+      "n_classes": 4,
+      "top1": 0.5414012738853503,
+      "coverage": 0.3057324840764331,
+      "selective_precision": 0.8333333333333334,
+      "threshold": 0.8254386782646179
+    },
+    "Audi": {
+      "n": 580,
+      "n_classes": 14,
+      "top1": 0.4879310344827586,
+      "coverage": 0.10344827586206896,
+      "selective_precision": 0.8,
+      "threshold": 0.9098244905471802
+    },
+    "BMW": {
+      "n": 524,
+      "n_classes": 13,
+      "top1": 0.6316793893129771,
+      "coverage": 0.22519083969465647,
+      "selective_precision": 0.8983050847457628,
+      "threshold": 0.8876336812973022
+    },
+    "Bentley": {
+      "n": 234,
+      "n_classes": 6,
+      "top1": 0.6068376068376068,
+      "coverage": 0.11538461538461539,
+      "selective_precision": 0.8148148148148148,
+      "threshold": 0.9678981900215149
+    },
+    "Bugatti": {
+      "n": 75,
+      "n_classes": 2,
+      "top1": 0.7066666666666667,
+      "coverage": 0.4533333333333333,
+      "selective_precision": 0.8529411764705882,
+      "threshold": 0.8254386782646179
+    },
+    "Buick": {
+      "n": 156,
+      "n_classes": 4,
+      "top1": 0.782051282051282,
+      "coverage": 0.4551282051282051,
+      "selective_precision": 0.9859154929577465,
+      "threshold": 0.8254386782646179
+    },
+    "Cadillac": {
+      "n": 128,
+      "n_classes": 3,
+      "top1": 0.8046875,
+      "coverage": 0.53125,
+      "selective_precision": 0.9852941176470589,
+      "threshold": 0.8254386782646179
+    },
+    "Chevrolet": {
+      "n": 894,
+      "n_classes": 22,
+      "top1": 0.616331096196868,
+      "coverage": 0.23378076062639822,
+      "selective_precision": 0.9282296650717703,
+      "threshold": 0.8928359746932983
+    },
+    "Chrysler": {
+      "n": 256,
+      "n_classes": 6,
+      "top1": 0.71484375,
+      "coverage": 0.64453125,
+      "selective_precision": 0.9575757575757575,
+      "threshold": 0.6210267543792725
+    },
+    "Daewoo": {
+      "n": 45,
+      "n_classes": 1,
+      "top1": 0.7777777777777778,
+      "coverage": 0.26666666666666666,
+      "selective_precision": 0.9166666666666666,
+      "threshold": 0.8254386782646179
+    },
+    "Dodge": {
+      "n": 623,
+      "n_classes": 15,
+      "top1": 0.6934189406099518,
+      "coverage": 0.44301765650080255,
+      "selective_precision": 0.9166666666666666,
+      "threshold": 0.8272724747657776
+    },
+    "Eagle": {
+      "n": 46,
+      "n_classes": 1,
+      "top1": 0.6086956521739131,
+      "coverage": 0.32608695652173914,
+      "selective_precision": 1.0,
+      "threshold": 0.8254386782646179
+    },
+    "FIAT": {
+      "n": 60,
+      "n_classes": 2,
+      "top1": 0.8666666666666667,
+      "coverage": 0.6833333333333333,
+      "selective_precision": 1.0,
+      "threshold": 0.8254386782646179
+    },
+    "Ferrari": {
+      "n": 162,
+      "n_classes": 4,
+      "top1": 0.5987654320987654,
+      "coverage": 0.3333333333333333,
+      "selective_precision": 0.8888888888888888,
+      "threshold": 0.8254386782646179
+    },
+    "Fisker": {
+      "n": 43,
+      "n_classes": 1,
+      "top1": 0.8372093023255814,
+      "coverage": 0.4883720930232558,
+      "selective_precision": 0.9523809523809523,
+      "threshold": 0.8254386782646179
+    },
+    "Ford": {
+      "n": 514,
+      "n_classes": 12,
+      "top1": 0.6984435797665369,
+      "coverage": 0.4163424124513619,
+      "selective_precision": 0.9626168224299065,
+      "threshold": 0.8285977244377136
+    },
+    "GMC": {
+      "n": 235,
+      "n_classes": 5,
+      "top1": 0.7446808510638298,
+      "coverage": 0.5617021276595745,
+      "selective_precision": 0.9924242424242424,
+      "threshold": 0.6323563456535339
+    },
+    "Geo": {
+      "n": 44,
+      "n_classes": 1,
+      "top1": 0.7727272727272727,
+      "coverage": 0.5909090909090909,
+      "selective_precision": 0.9615384615384616,
+      "threshold": 0.8254386782646179
+    },
+    "HUMMER": {
+      "n": 82,
+      "n_classes": 2,
+      "top1": 0.6585365853658537,
+      "coverage": 0.34146341463414637,
+      "selective_precision": 0.8928571428571429,
+      "threshold": 0.8254386782646179
+    },
+    "Honda": {
+      "n": 160,
+      "n_classes": 4,
+      "top1": 0.69375,
+      "coverage": 0.35,
+      "selective_precision": 1.0,
+      "threshold": 0.8254386782646179
+    },
+    "Hyundai": {
+      "n": 433,
+      "n_classes": 11,
+      "top1": 0.7020785219399538,
+      "coverage": 0.40877598152424943,
+      "selective_precision": 0.9548022598870056,
+      "threshold": 0.8015434741973877
+    },
+    "Infiniti": {
+      "n": 66,
+      "n_classes": 2,
+      "top1": 0.696969696969697,
+      "coverage": 0.36363636363636365,
+      "selective_precision": 0.9166666666666666,
+      "threshold": 0.8254386782646179
+    },
+    "Isuzu": {
+      "n": 40,
+      "n_classes": 1,
+      "top1": 0.875,
+      "coverage": 0.55,
+      "selective_precision": 0.9545454545454546,
+      "threshold": 0.8254386782646179
+    },
+    "Jaguar": {
+      "n": 46,
+      "n_classes": 1,
+      "top1": 0.6086956521739131,
+      "coverage": 0.21739130434782608,
+      "selective_precision": 0.9,
+      "threshold": 0.8254386782646179
+    },
+    "Jeep": {
+      "n": 218,
+      "n_classes": 5,
+      "top1": 0.7706422018348624,
+      "coverage": 0.5504587155963303,
+      "selective_precision": 0.9666666666666667,
+      "threshold": 0.8254386782646179
+    },
+    "Lamborghini": {
+      "n": 158,
+      "n_classes": 4,
+      "top1": 0.8164556962025317,
+      "coverage": 0.6455696202531646,
+      "selective_precision": 0.9803921568627451,
+      "threshold": 0.8254386782646179
+    },
+    "Land Rover": {
+      "n": 84,
+      "n_classes": 2,
+      "top1": 0.7619047619047619,
+      "coverage": 0.5952380952380952,
+      "selective_precision": 0.94,
+      "threshold": 0.8254386782646179
+    },
+    "Lincoln": {
+      "n": 39,
+      "n_classes": 1,
+      "top1": 0.717948717948718,
+      "coverage": 0.5384615384615384,
+      "selective_precision": 0.9047619047619048,
+      "threshold": 0.8254386782646179
+    },
+    "MINI": {
+      "n": 36,
+      "n_classes": 1,
+      "top1": 0.8611111111111112,
+      "coverage": 0.7222222222222222,
+      "selective_precision": 1.0,
+      "threshold": 0.8254386782646179
+    },
+    "Maybach": {
+      "n": 29,
+      "n_classes": 1,
+      "top1": 0.896551724137931,
+      "coverage": 0.5172413793103449,
+      "selective_precision": 1.0,
+      "threshold": 0.8254386782646179
+    },
+    "Mazda": {
+      "n": 36,
+      "n_classes": 1,
+      "top1": 0.7777777777777778,
+      "coverage": 0.3611111111111111,
+      "selective_precision": 0.9230769230769231,
+      "threshold": 0.8254386782646179
+    },
+    "McLaren": {
+      "n": 44,
+      "n_classes": 1,
+      "top1": 0.8863636363636364,
+      "coverage": 0.5681818181818182,
+      "selective_precision": 1.0,
+      "threshold": 0.8254386782646179
+    },
+    "Mercedes-Benz": {
+      "n": 257,
+      "n_classes": 6,
+      "top1": 0.6809338521400778,
+      "coverage": 0.5486381322957199,
+      "selective_precision": 0.950354609929078,
+      "threshold": 0.6802570819854736
+    },
+    "Mitsubishi": {
+      "n": 47,
+      "n_classes": 1,
+      "top1": 0.46808510638297873,
+      "coverage": 0.14893617021276595,
+      "selective_precision": 1.0,
+      "threshold": 0.8254386782646179
+    },
+    "Nissan": {
+      "n": 170,
+      "n_classes": 4,
+      "top1": 0.8588235294117647,
+      "coverage": 0.6058823529411764,
+      "selective_precision": 0.9902912621359223,
+      "threshold": 0.8254386782646179
+    },
+    "Plymouth": {
+      "n": 44,
+      "n_classes": 1,
+      "top1": 0.9318181818181818,
+      "coverage": 0.7045454545454546,
+      "selective_precision": 0.967741935483871,
+      "threshold": 0.8254386782646179
+    },
+    "Porsche": {
+      "n": 43,
+      "n_classes": 1,
+      "top1": 0.5581395348837209,
+      "coverage": 0.20930232558139536,
+      "selective_precision": 1.0,
+      "threshold": 0.8254386782646179
+    },
+    "Ram": {
+      "n": 41,
+      "n_classes": 1,
+      "top1": 0.8292682926829268,
+      "coverage": 0.5609756097560976,
+      "selective_precision": 0.9130434782608695,
+      "threshold": 0.8254386782646179
+    },
+    "Rolls-Royce": {
+      "n": 112,
+      "n_classes": 3,
+      "top1": 0.6696428571428571,
+      "coverage": 0.41964285714285715,
+      "selective_precision": 0.9148936170212766,
+      "threshold": 0.8254386782646179
+    },
+    "Scion": {
+      "n": 41,
+      "n_classes": 1,
+      "top1": 0.6829268292682927,
+      "coverage": 0.2926829268292683,
+      "selective_precision": 0.9166666666666666,
+      "threshold": 0.8254386782646179
+    },
+    "Spyker": {
+      "n": 87,
+      "n_classes": 2,
+      "top1": 0.6091954022988506,
+      "coverage": 0.3563218390804598,
+      "selective_precision": 0.9354838709677419,
+      "threshold": 0.8254386782646179
+    },
+    "Suzuki": {
+      "n": 166,
+      "n_classes": 4,
+      "top1": 0.5542168674698795,
+      "coverage": 0.25301204819277107,
+      "selective_precision": 0.9285714285714286,
+      "threshold": 0.8254386782646179
+    },
+    "Tesla": {
+      "n": 38,
+      "n_classes": 1,
+      "top1": 0.7631578947368421,
+      "coverage": 0.3684210526315789,
+      "selective_precision": 1.0,
+      "threshold": 0.8254386782646179
+    },
+    "Toyota": {
+      "n": 164,
+      "n_classes": 4,
+      "top1": 0.7012195121951219,
+      "coverage": 0.4024390243902439,
+      "selective_precision": 0.9696969696969697,
+      "threshold": 0.8254386782646179
+    },
+    "Volkswagen": {
+      "n": 131,
+      "n_classes": 3,
+      "top1": 0.7862595419847328,
+      "coverage": 0.4961832061068702,
+      "selective_precision": 1.0,
+      "threshold": 0.8254386782646179
+    },
+    "Volvo": {
+      "n": 129,
+      "n_classes": 3,
+      "top1": 0.7441860465116279,
+      "coverage": 0.5193798449612403,
+      "selective_precision": 0.9850746268656716,
+      "threshold": 0.8254386782646179
+    },
+    "smart": {
+      "n": 40,
+      "n_classes": 1,
+      "top1": 0.825,
+      "coverage": 0.425,
+      "selective_precision": 0.9411764705882353,
+      "threshold": 0.8254386782646179
+    }
+  },
+  "worst_classes": [
+    {
+      "class": "Audi S5 Coupe 2012",
+      "n": 42,
+      "top1": 0.16666666666666666
+    },
+    {
+      "class": "Bentley Continental GT Coupe 2007",
+      "n": 46,
+      "top1": 0.2826086956521739
+    },
+    {
+      "class": "Audi TTS Coupe 2012",
+      "n": 42,
+      "top1": 0.30952380952380953
+    },
+    {
+      "class": "Chevrolet Tahoe Hybrid SUV 2012",
+      "n": 37,
+      "top1": 0.35135135135135137
+    },
+    {
+      "class": "Hyundai Azera Sedan 2012",
+      "n": 42,
+      "top1": 0.35714285714285715
+    },
+    {
+      "class": "Suzuki SX4 Sedan 2012",
+      "n": 40,
+      "top1": 0.375
+    },
+    {
+      "class": "Audi S4 Sedan 2012",
+      "n": 39,
+      "top1": 0.38461538461538464
+    },
+    {
+      "class": "Aston Martin V8 Vantage Coupe 2012",
+      "n": 41,
+      "top1": 0.3902439024390244
+    },
+    {
+      "class": "Toyota Corolla Sedan 2012",
+      "n": 43,
+      "top1": 0.3953488372093023
+    },
+    {
+      "class": "Dodge Charger Sedan 2012",
+      "n": 41,
+      "top1": 0.4146341463414634
+    },
+    {
+      "class": "Chevrolet Express Van 2007",
+      "n": 35,
+      "top1": 0.42857142857142855
+    },
+    {
+      "class": "Ferrari 458 Italia Coupe 2012",
+      "n": 42,
+      "top1": 0.42857142857142855
+    },
+    {
+      "class": "Acura RL Sedan 2012",
+      "n": 32,
+      "top1": 0.4375
+    },
+    {
+      "class": "Chevrolet Impala Sedan 2007",
+      "n": 43,
+      "top1": 0.4418604651162791
+    },
+    {
+      "class": "Aston Martin V8 Vantage Convertible 2012",
+      "n": 45,
+      "top1": 0.4444444444444444
+    }
+  ],
+  "model": {
+    "backbone": "resnet50.a1_in1k",
+    "version": "20261007-111400",
+    "split": "test",
+    "target_precision": 0.95
+  }
+}

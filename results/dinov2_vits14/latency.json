@@ -1,0 +1,11 @@
+{
+  "runtime": "onnxruntime",
+  "backbone": "vit_small_patch14_dinov2.lvd142m",
+  "image_size": 224,
+  "runs": 100,
+  "p50_ms": 132.89,
+  "p95_ms": 293.1,
+  "p99_ms": 340.14,
+  "threads": 2,
+  "cpu": "x86_64"
+}
