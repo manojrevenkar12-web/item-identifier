@@ -1,6 +1,8 @@
 # Item Identifier — fine-grained visual identification that knows when it is unsure
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/manojrevenkar12-web/item-identifier/blob/main/notebooks/train_stanford_cars_colab.ipynb)
+[![ci](https://github.com/manojrevenkar12-web/item-identifier/actions/workflows/ci.yml/badge.svg)](https://github.com/manojrevenkar12-web/item-identifier/actions/workflows/ci.yml) [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE) [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/manojrevenkar12-web/item-identifier/blob/main/notebooks/train_stanford_cars_colab.ipynb)
+
+> **Results on 8,041 held-out images (Stanford Cars, 196 classes):** 90.6% top-1 · calibration error 0.230 → 0.021 · 80.6% of photos auto-identified at 95.9% precision, the rest routed to human review · uncertainty sampling needs ~20% fewer labels than random. [Full results ↓](#results)
 
 
 A production-oriented computer-vision system that identifies an exact item (here: one of 196 car
